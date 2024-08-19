@@ -1,9 +1,29 @@
-# Temas Avanzados en Java 8
+# Temas Avanzados en Java 8 (Programación Funcional)
+
+---
+## Indice
+
+1. [Expresiones Lambda](#1)
+2. [Interfaces Funcionales](#2)
+3. [Stream API](#3)
+4. [Optional](#4)
+5. [Nuevas API de Date y Time](#5)
+6. [Default Methods en Interfaces](#6)
+7. [Static Methods en Interfaces](#7)
+8. [Nueva API de Concurrencia](#8)
+9. [Mapeo de Colecciones y Streams](#9)
+10. [Collectors y Reduction](#10)
+11. [Nashorn JavaScript Engine](#11)
+12. [Type Annotations](#12)
+13. [Métodos de Fábrica de Colecciones](#13)
+14. [Metodología Funcional y Conceptos Avanzados](#14)
+
+----
 
 ## 1. Expresiones Lambda
 ---
 
-#### Introducción a las expresiones lambda
+#### Introducción a las expresiones lambda <a name="1"></a>
 
 Las expresiones lambda en Java permiten escribir funciones de manera concisa sin tener que crear clases anónimas. Son una forma de implementar interfaces funcionales (interfaces con un solo método abstracto) utilizando una sintaxis más compacta.
 
@@ -16,7 +36,7 @@ La sintaxis general de una expresión lambda es:
 ```
 
 - Parametros: Lista de parámetros para el método de la interfaz funcional. Puede ser vacía, tener uno o varios parámetros.
-- ->: Operador lambda que separa los parámetros de la expresión o el bloque de código.
+- -> : Operador lambda que separa los parámetros de la expresión o el bloque de código.
 - Expresión: Cuerpo de la lambda. Si es una única expresión, el valor de esta expresión se retorna automáticamente. Si es un bloque de código, se usa return para devolver el valor.
 
 ###### Ejemplo:
@@ -79,7 +99,7 @@ Las expresiones lambda en Java se utilizan principalmente con interfaces funcion
 
 las expresiones lambda pueden utilizarse en una amplia gama de contextos donde se necesitan implementaciones concisas de interfaces funcionales. Esto incluye la manipulación de datos, el manejo de eventos, la programación concurrente, y más.
 
-###  2. Interfaces Funcionales
+###  2. Interfaces Funcionales <a name="2"></a>
 ---
 
 #### Definición y uso de interfaces funcionales.
@@ -210,7 +230,7 @@ La anotación @FunctionalInterface en Java se utiliza para marcar una interfaz c
 - **void metodoUnico():** El único método abstracto en la interfaz.
 
 
-###  3. Stream API
+###  3. Stream API <a name="3"></a>
 ---
 #### Conceptos básicos y flujo de datos.
 
@@ -384,7 +404,7 @@ Cuando se trabaja con Streams, los métodos findFirst() y findAny() son útiles 
     cualquierNombre.ifPresent(System.out::println);  // Imprime cualquier nombre de la lista
 ```
 
-###  4. Optional
+###  4. Optional <a name="4"></a>
 ---
 #### Concepto de Optional y su uso para evitar NullPointerException.
 
@@ -477,47 +497,47 @@ Puedes encadenar métodos para realizar transformaciones y comprobaciones de man
 - **En Otros Contextos:** Optional ayuda a manejar valores que pueden ser nulos, proporcionando métodos para manejar valores de manera segura y evitar NullPointerException.
 - **Ventajas:** Mejora la legibilidad del código, reduce errores y hace explícito el manejo de la ausencia de valores.
 
-###  5. Nuevas API de Date y Time (java.time)
+###  5. Nuevas API de Date y Time (java.time) <a name="5"></a>
 ---
 LocalDate, LocalTime, LocalDateTime.
 ZonedDateTime y manejo de zonas horarias.
 Period y Duration.
 Uso de DateTimeFormatter y conversión entre fechas.
-###  6. Default Methods en Interfaces
+###  6. Default Methods en Interfaces <a name="6"></a>
 ---
 Concepto de métodos por defecto en interfaces.
 Creación y uso de métodos por defecto.
 Resolución de conflictos cuando una clase implementa múltiples interfaces con métodos por defecto.
-###  7. Static Methods en Interfaces
+###  7. Static Methods en Interfaces <a name="7"></a>
 ---
 Definición y uso de métodos estáticos en interfaces.
 Diferencias entre métodos estáticos y métodos por defecto.
-###  8. Nueva API de Concurrencia
+###  8. Nueva API de Concurrencia <a name="8"></a>
 ---
 Mejoras en la concurrencia, como CompletableFuture.
 Ejecución asincrónica y manejo de tareas complejas.
 Métodos avanzados de concurrencia (ForkJoinPool, parallelStream).
-###  9. Mapeo de Colecciones y Streams
+###  9. Mapeo de Colecciones y Streams <a name="9"></a>
 ---
 Transformación de colecciones usando Streams.
 Uso de map(), flatMap() y collect() para agrupar, transformar, y procesar colecciones.
-###  10. Collectors y Reduction
+###  10. Collectors y Reduction <a name="10"></a>
 ---
 Uso de Collectors para operaciones avanzadas en Streams.
 Reducción y agrupación de datos con métodos como groupingBy(), partitioningBy(), y joining().
-###  11. Nashorn JavaScript Engine
+###  11. Nashorn JavaScript Engine <a name="11"></a>
 ---
 Introducción al motor JavaScript Nashorn.
 Ejecución de código JavaScript desde Java.
 Integración de Java con scripts en tiempo de ejecución.
-###  12. Type Annotations
+###  12. Type Annotations <a name="12"></a>
 ---
 Concepto y uso de anotaciones en diferentes partes del código.
 Anotaciones en parámetros, tipos genéricos, y más.
-###  13. Métodos de Fábrica de Colecciones (Java 9)
+###  13. Métodos de Fábrica de Colecciones (Java 9) <a name="13"></a>
 ---
 Aunque esta característica se introdujo en Java 9, es útil conocer los métodos de fábrica (List.of(), Set.of(), Map.of()) para crear colecciones inmutables.
-###  14. Metodología Funcional y Conceptos Avanzados
+###  14. Metodología Funcional y Conceptos Avanzados <a name="14"></a>
 ---
 Patrones de diseño aplicados en el contexto de Java 8.
 Composición de funciones y técnicas avanzadas de programación funcional.
